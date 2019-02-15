@@ -87,6 +87,7 @@ class Game extends Component {
 
   // game running, checking for all of the inputs and wins/losses
   checkGame = key => {
+    console.log("check game ran.");
     this.checkLetters(key);
     this.checkLoss();
     this.checkWin();
