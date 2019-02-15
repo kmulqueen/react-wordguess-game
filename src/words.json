@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "hint": "Hint 1",
+    "word": "test 1"
+  },
+  {
+    "id": 2,
+    "hint": "Hint 2",
+    "word": "test 2"
+  },
+  {
+    "id": 3,
+    "hint": "Hint 3",
+    "word": "test 3"
+  }
+]
