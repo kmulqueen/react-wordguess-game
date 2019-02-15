@@ -1,31 +1,37 @@
 import React from "react";
-import { Jumbotron, Button } from "reactstrap";
+import { Row, Col, Button } from "reactstrap";
 import Word from "./Word";
 import Hint from "./Hint";
 import Score from "./Score";
 
 const MainDisplay = props => {
   return (
-    <Jumbotron>
-      <h1 className="display-3">Title</h1>
-
-      <Hint hint={props.hint} />
-
-      <Score
-        wins={props.wins}
-        losses={props.losses}
-        wrongGuesses={props.wrongGuesses}
-        numGuesses={props.numGuesses}
-        className="my-2"
-      />
-
-      <Word word={props.word} underscores={props.underscores} />
-      <p className="lead">
-        <Button color="primary" onClick={props.startRound}>
-          New Word
+    <div>
+      <Row>
+        <Col className="text-center">Word Guess Game</Col>
+      </Row>
+      <Row>
+        <Score
+          wins={props.wins}
+          losses={props.losses}
+          wrongGuesses={props.wrongGuesses}
+          numGuesses={props.numGuesses}
+        />
+        <Col md="8">
+          <Hint hint={props.hint} />
+          <Word word={props.word} underscores={props.underscores} />
+        </Col>
+      </Row>
+      <Row>
+        <Button
+          className="start-round-button"
+          color="info"
+          onClick={props.startRound}
+        >
+          Start Round
         </Button>
-      </p>
-    </Jumbotron>
+      </Row>
+    </div>
   );
 };
 
